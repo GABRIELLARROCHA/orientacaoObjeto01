@@ -5,6 +5,7 @@ public class Conta {
     private String agencia;
     private double saldo;
     private String titular;
+   // private Double tranfere;
 
     public Conta(){ // construtor default
 
@@ -16,6 +17,7 @@ public class Conta {
         this.agencia = agencia;
         this.saldo = saldo;
         this.titular = titular;
+
     }
 
     public String getNumero() {
@@ -57,4 +59,24 @@ public class Conta {
 
         }
     }
-}
+
+    public void transfere (Conta destinatario ,double valor) {
+        if ( valor <= this.saldo){
+            this.saldo -=valor;
+            destinatario.saldo +=valor;
+
+        }
+    }
+
+    //public void getTransfere(){
+
+
+
+    }
+
+
+
+
+
+
+
